@@ -124,5 +124,15 @@
       </div>
     </section>
     <script src="/javascript/js.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>
+    <script>
+      const clipboard = new Clipboard(".btn");
+
+      function alerta() {
+        alert(
+          "Se copió con exito el numero de orden, no olvide pegarlo antes del titulo de su tarjeta en trello"
+        );
+      }
+    </script>
   </body>
 </html>

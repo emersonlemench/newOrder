@@ -4,31 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nueva Orden</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <section>
-    <div class="botones">
-      <form action="/" method="POST">
-        <button>
-          Generar una nueva orden
-        </button>
-      </form>
-    </div>
-  </section>
-   
-  <script src="/javascript/js.js"></script>
-  <script>const clipboard = new Clipboard(".btn");
-
-    function alerta() {
-      alert(
-        "Se copió con exito el numero de orden, no olvide pegarlo antes del titulo de su tarjeta en trello"
-      );
-    
-    }
-    
-    </script>
-        <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>
-
-  </body>
+      <div class="botones">
+        <form action="/orden" method="POST">
+          <button>Generar una nueva orden</button>
+        </form>
+      </div>
+    </section>
+    <script src="/javascript/js.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>
+</body>
 </html>

@@ -23,7 +23,7 @@ if (dosNum == "00") {
 var newData = JSON.stringify(convert);
 
 function calendario() {
-  cron.schedule("* * * 1 * *", () => {
+  cron.schedule("* * 5 * * *", () => {
     fs.writeFileSync(path.join(__dirname, "../data/base.json"), newData);
   });
 }

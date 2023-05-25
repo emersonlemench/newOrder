@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const router = require('./src/routes/route')
-const salto = require('./src/controllers/salto');
 
 
 

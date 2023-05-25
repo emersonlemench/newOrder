@@ -29,7 +29,147 @@
       </div>
     </section>
   
+    <style>
+      * {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: rgb(0, 55, 70);
+}
+section{
+  width:100%;
+  height:100vh;
+  margin: 20px 0 20px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.display{
+  background-color: rgba(129, 129, 129,0.5);
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 0 0;
+  border-radius: 10px;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:20px 0px 20px 0px;
+}
+
+
+.guion {
+  opacity: 0;
+}
+button {
+  background-color: black;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 40px 20px 40px;
+  position: relative;
+  border-radius: 12px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    white,
+    rgb(255, 255, 200),
+    rgb(255, 230, 0),
+    rgb(255, 130, 0),
+    rgb(255, 0, 0),
+    rgb(255, 0, 200),
+    rgb(180, 0, 255),
+    rgb(0, 0, 255),
+    rgb(0, 200, 255),
+    rgb(0, 255, 0)
+  );
+  background-size: 800%;
+  border-radius: 10px;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: res 20s linear infinite;
+}
+
+@keyframes res {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.formu{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.formu input{
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  border: none;
+  padding: 20px;
+  font-size: 1em;
+ text-align: center;
+}
+    </style>
     <script src="/javascript/js.js" ></script>
     <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.3/dist/clipboard.min.js"></script>  
+ <script>window.addEventListener("load", function () {
+  const clipboard = new Clipboard(".btn");
+
+  function alerta() {
+    alert(
+      "Se copió con exito el numero de orden, no olvide pegarlo antes del titulo de su tarjeta en trello"
+    );
+  }
+
+  let formu = document.querySelector("form.formu");
+
+  formu.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let campo = document.querySelector("#num");
+
+    if (campo.value <= 0) {
+      alert("Ingrese un número válido");
+    }else{
+      formu.submit()
+    }
+  });
+});
+</script>
+ 
+ 
   </body>
 </html>
